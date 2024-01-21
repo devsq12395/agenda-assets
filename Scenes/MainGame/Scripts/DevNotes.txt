@@ -1,0 +1,4 @@
+To do:
+
+- On Editor, create a sample char, add "CH_SampleChar" component
+- Camera controls
