@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class ContArea : MonoBehaviour {
 
@@ -25,8 +26,12 @@ public class ContArea : MonoBehaviour {
         return areas.Find(area => area.name == _name);
     }
 
-     public ObjArea get_area_from_id (int _id){
+    public ObjArea get_area_from_id (int _id){
         return areas.Find(area => area.id == _id);
+    }
+
+    public List<ObjArea> get_areas_with_tag (string _tag){
+        return areas.Where(area => area.tags.Contains (_tag)).ToList ();
     }
 
     // Area to Player control

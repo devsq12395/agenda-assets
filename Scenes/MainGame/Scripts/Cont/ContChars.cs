@@ -11,6 +11,18 @@ public class ContChars : MonoBehaviour {
         
     }
 
+    // Create
+    public void create_char (string _name, int _owner){
+        ObjArea _spawnArea = ContArea.I.get_areas_with_tag ($"base{_owner}")[0];
+        if (!_spawnArea){
+            Debug.Log ("Base for this char does not exist. Aborting spawn...");
+            return;
+        }
+
+        ObjChar _new = new ObjChar ();
+    }
+
+    // Action
     public void assign_task (ObjChar _c, string _t, ObjArea _area) {
         DB_Tasks.TaskData _data = DB_Tasks.I.get_task_data (_t);
 
@@ -33,4 +45,6 @@ public class ContChars : MonoBehaviour {
             }
         }
     }
+
+    
 }

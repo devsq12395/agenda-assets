@@ -99,6 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: sampArea1
   nameUI: Sample1
+  tags:
+  - base1
   optEnemies:
   - connect
   optNeutral:
@@ -106,6 +108,6 @@ MonoBehaviour:
   optFriends:
   - connect
   go: {fileID: 0}
-  id: 
+  id: 0
   rect: {fileID: 0}
-  connections: []
+  connections: 

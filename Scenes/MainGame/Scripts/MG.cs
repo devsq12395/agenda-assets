@@ -14,6 +14,7 @@ public class MG : MonoBehaviour {
         ContPlayers.I.setup ();
         ContChars.I.setup ();
 
+        UI_CharPane.I.setup ();
         UI_AreaChk.I.setup ();
     }
 

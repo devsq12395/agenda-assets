@@ -8,7 +8,7 @@ public class ObjArea : MonoBehaviour {
     [Header("------ UNITY EDITOR EDITABLE PARTS ------")]
     public string name;
     public string nameUI;
-    public List<string> optEnemies, optNeutral, optFriends;
+    public List<string> tags, optEnemies, optNeutral, optFriends;
 
     [Header("------ NON-EDITABLE PARTS ------")]
     public GameObject go;
