@@ -19,10 +19,10 @@ public class MG : MonoBehaviour {
     }
 
     void Update() {
-        
+        ContChars.I.game_update ();
     }
 
     public void change_scene (string _scene){
-
+        
     }
 }

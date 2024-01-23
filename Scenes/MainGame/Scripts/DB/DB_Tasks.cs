@@ -9,13 +9,13 @@ public class DB_Tasks : MonoBehaviour {
 
     public struct TaskData {
         public string name, nameUI, desc;
-        public int turns;
+        public float dur;
 
         public TaskData (string _n){
             name = _n;
             nameUI = "";
             desc = "";
-            turns = 1;
+            dur = 1;
         }
     }
 
@@ -26,7 +26,7 @@ public class DB_Tasks : MonoBehaviour {
             case "test":
                 _ret.nameUI = "Test";
                 _ret.desc = "testing";
-                _ret.turns = 1;
+                _ret.dur = 1;
                 break;
         }
 

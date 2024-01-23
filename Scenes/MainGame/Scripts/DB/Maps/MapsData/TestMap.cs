@@ -22,10 +22,14 @@ public class TestMap : MonoBehaviour {
     }
 
     public void create_map_objs (){
+        // Areas
         ObjArea area1 = ContArea.I.get_area ("sampArea1"),
                 area2 = ContArea.I.get_area ("sampArea2");
 
         ContArea.I.connect (area1, area2);
+
+        // Chars
+        ContChars.I.create_char ("testchar", 1);
     }
 
 }
