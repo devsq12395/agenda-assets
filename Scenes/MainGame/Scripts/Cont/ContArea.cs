@@ -21,6 +21,11 @@ public class ContArea : MonoBehaviour {
         }
     }
 
+    // Actions
+    public void select_area (ObjArea _a){
+        UI_AreaChk.I.show (_a);
+    }
+
     // GET Functions
     public ObjArea get_area (string _name){
         return areas.Find(area => area.name == _name);
@@ -34,6 +39,12 @@ public class ContArea : MonoBehaviour {
         return areas.Where(area => area.tags.Contains (_tag)).ToList ();
     }
 
+    public string get_relation (ObjArea _a, int _p) {
+        Player _pO = ContPlayers.I.get_player_from_id (_p);
+
+        
+    }
+
     // Area to Player control
     public void add_relations (ContPlayers.Player _p){
         foreach (ObjArea _a in areas) {
@@ -43,6 +54,12 @@ public class ContArea : MonoBehaviour {
 
     // Area to Char control
     public void assign_task_to_char (ObjArea _area, ObjChar _c, string _t){
+        DB_Tasks.TaskData _data = DB_Tasks.I.get_task_data (_t);
+
+        _c.task = _t;
+        _c.tsk_curAreaID = _area.id;
+        _c.tsk_dur = _data.dur;
+        
         _c.transform.position = _area.transform.position;
     }
 

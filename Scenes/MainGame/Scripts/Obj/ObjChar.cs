@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ObjChar : MonoBehaviour {  
 
-    public GameObject go;
+    public GameObject go, goSelUI;
 
     public string name, nameUI;
     public int hp, hpMax;
@@ -17,7 +17,7 @@ public class ObjChar : MonoBehaviour {
     public int tsk_curAreaID;
     public float tsk_dur;
 
-    void Start (){
-        
+    public void select (){
+        ContChars.I.select_char (this);
     }
 }

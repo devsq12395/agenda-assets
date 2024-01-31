@@ -33,17 +33,20 @@ public class ContChars : MonoBehaviour {
         ObjChar _new = _newObj.GetComponent<ObjChar>();
         _new.owner = _owner;
         _new.go = _newObj;
+        _new.goSelUI.SetActive (false);
+
         chars.Add (_new);
         assign_task (_new, "idle", _p.cBase);
     }
 
-    // Action
-    public void assign_task (ObjChar _c, string _t, ObjArea _area) {
-        DB_Tasks.TaskData _data = DB_Tasks.I.get_task_data (_t);
+    // Actions
+    public void select_char (ObjChar _c){
+        MG.I.slChar = _c;
+        _c.goSelUI.SetActive (true);
+    }
 
-        _c.task = _t;
-        _c.tsk_curAreaID = _area.id;
-        _c.tsk_dur = _data.dur;
+    // Task
+    public void assign_task (ObjChar _c, string _t, ObjArea _area) {
         ContArea.I.assign_task_to_char (_area, _c, _t);
     }
 

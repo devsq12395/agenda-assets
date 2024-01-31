@@ -6,6 +6,8 @@ public class MG : MonoBehaviour {
     public static MG I;
 	public void Awake(){ I = this; }
 
+    public ContChars selChar;
+
     void Start() {
         // TEST
         PlayerPrefs.SetString ("map", "testMap");

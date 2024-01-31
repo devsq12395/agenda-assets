@@ -30,5 +30,7 @@ public class ObjArea : MonoBehaviour {
         options.Add ("friends", new List<string>(optFriends));
     }
 
-    
+    public void select (){
+        ContChars.I.select_area (this);
+    }
 }
