@@ -10,7 +10,7 @@ public class DB_Obj : MonoBehaviour {
     public GameObject dummy;
 
     // Chars
-    public GameObject testchar;
+    public GameObject charSel, testchar;
 
     void Start() {
         
@@ -26,6 +26,7 @@ public class DB_Obj : MonoBehaviour {
         
         switch (_name) {
             // Chars
+            case "charSel":                     _refObj = charSel; break;
             case "testchar":                    _refObj = testchar; break;
 
             default: _refObj = dummy; break;

@@ -21,7 +21,6 @@ public class ContMap : MonoBehaviour {
         pointList = details.pointList;
 
         ContArea.I.setup ();
-        create_map_objs ();
     }
 
     public void change_map (string _map){

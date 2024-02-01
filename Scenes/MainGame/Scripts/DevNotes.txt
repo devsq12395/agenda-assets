@@ -5,6 +5,8 @@ Status of each system:
 
 To do:
 
+- Need char to be selectable, then area to be selectable
+
 - OE, add DB_Obj.cs
 - On Editor, create a sample char, add "CH_SampleChar" component
 - Camera controls

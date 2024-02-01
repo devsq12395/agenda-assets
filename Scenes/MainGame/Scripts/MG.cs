@@ -6,14 +6,16 @@ public class MG : MonoBehaviour {
     public static MG I;
 	public void Awake(){ I = this; }
 
-    public ContChars selChar;
+    public ObjChar selChar;
 
     void Start() {
         // TEST
         PlayerPrefs.SetString ("map", "testMap");
 
-        ContMap.I.setup_map ();
         ContPlayers.I.setup ();
+        ContMap.I.setup_map ();
+        ContPlayers.I.create_players ();
+        ContMap.I.create_map_objs ();
         ContChars.I.setup ();
 
         UI_CharPane.I.setup ();

@@ -29,19 +29,25 @@ public class ContChars : MonoBehaviour {
 
         ContPlayers.Player _p = ContPlayers.I.get_player_from_id (_owner);
 
-        GameObject _newObj = DB_Obj.I.get_game_obj ("testchar");
+        GameObject  _newObj = DB_Obj.I.get_game_obj ("testchar"),
+                    _charSel = DB_Obj.I.get_game_obj ("charSel");
         ObjChar _new = _newObj.GetComponent<ObjChar>();
         _new.owner = _owner;
         _new.go = _newObj;
+
+        _charSel.transform.SetParent (_newObj.transform);
+        _new.goSelUI = _charSel;
         _new.goSelUI.SetActive (false);
 
         chars.Add (_new);
+        Debug.Log (_p.name);
+        Debug.Log (_p.cBase);
         assign_task (_new, "idle", _p.cBase);
     }
 
     // Actions
     public void select_char (ObjChar _c){
-        MG.I.slChar = _c;
+        MG.I.selChar = _c;
         _c.goSelUI.SetActive (true);
     }
 

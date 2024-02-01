@@ -40,9 +40,10 @@ public class ContArea : MonoBehaviour {
     }
 
     public string get_relation (ObjArea _a, int _p) {
-        Player _pO = ContPlayers.I.get_player_from_id (_p);
+        ContPlayers.Player _pO = ContPlayers.I.get_player_from_id (_p);
 
-        
+        if (!_a.relation.ContainsKey (_pO.name)) return "";
+        return _a.relation [_pO.name];
     }
 
     // Area to Player control

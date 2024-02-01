@@ -31,6 +31,6 @@ public class ObjArea : MonoBehaviour {
     }
 
     public void select (){
-        ContChars.I.select_area (this);
+        ContArea.I.select_area (this);
     }
 }
